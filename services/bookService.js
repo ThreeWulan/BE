@@ -1,40 +1,40 @@
-const { prisma } = require("../config/prisma");
+// const { prisma } = require("../config/prisma");
 
-async function getAllBooks() {
-  try {
-    const books = await prisma.book.findMany();
+// async function getAllBooks() {
+//   try {
+//     const books = await prisma.book.findMany();
 
-    return books;
-  } catch (error) {
-    console.error(error);
+//     return books;
+//   } catch (error) {
+//     console.error(error);
 
-    throw new Error();
-  }
-}
+//     throw new Error();
+//   }
+// }
 
-async function createBook(book) {
-  try {
-    const mappedBook = {
-      data: {
-        nama: book.nama,
-        email: book.email,
-        judul_buku: book.judul_buku,
-        jumlah: book.jumlah,
-        alamat: book.alamat,
-        deskripsi: book.deskripsi,
-      },
-    };
-    const createdBook = await prisma.book.create(mappedBook);
+// async function createBook(book) {
+//   try {
+//     const mappedBook = {
+//       data: {
+//         nama: book.nama,
+//         email: book.email,
+//         judul_buku: book.judul_buku,
+//         jumlah: book.jumlah,
+//         alamat: book.alamat,
+//         deskripsi: book.deskripsi,
+//       },
+//     };
+//     const createdBook = await prisma.book.create(mappedBook);
 
-    return createdBook;
-  } catch (error) {
-    console.error(error);
+//     return createdBook;
+//   } catch (error) {
+//     console.error(error);
 
-    throw new Error();
-  }
-}
+//     throw new Error();
+//   }
+// }
 
-module.exports = {
-  getAllBooks,
-  createBook,
-};
+// module.exports = {
+//   getAllBooks,
+//   createBook,
+// };
