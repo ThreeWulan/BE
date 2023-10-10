@@ -2,7 +2,7 @@
 
 // async function getAllBooks() {
 //   try {
-//     const books = await prisma.book.findMany();
+//     const books = await prisma.findMany();
 
 //     return books;
 //   } catch (error) {
@@ -12,7 +12,7 @@
 //   }
 // }
 
-// async function createBook(book) {
+// async function createBook() {
 //   try {
 //     const mappedBook = {
 //       data: {
@@ -24,7 +24,7 @@
 //         deskripsi: book.deskripsi,
 //       },
 //     };
-//     const createdBook = await prisma.book.create(mappedBook);
+//     const createdBook = await prisma.create(mappedBook);
 
 //     return createdBook;
 //   } catch (error) {
